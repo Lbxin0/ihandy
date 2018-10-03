@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html style="font-size:62.5%">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>business_solution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/demo.css" />
+    <script src="main.js"></script>
+    <style>
+    .emails{
+    	margin-top: 3.5rem
+    }
+	#careerlist {
+      width: 95%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #careerlist .listheader {
+      padding: 19.0rem 0 2rem 0;
+      letter-spacing: 0;
+      font-size: 5rem;
+      font-weight: bold;
+    }
+    #listitem{
+        width:55%;
+        margin: 15rem auto;
+    }
+    #listitem h3{
+        /*margin: 14% 0 0;*/
+        font-family: AvenirLTStdMedium;
+        font-size: 23px;
+        font-weight: 100;
+    }
+    #listitem p{
+        opacity: 0.7;
+        font-family: AvenirLTStdLight;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 2.3rem 0 1.6rem 0;
+    }
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div id="contentTop" style="background:rgba(34, 24, 21, 0.7);">
+			<div class="header">
+				<a href="javaScript:;" class="logohref"><img src="http://www.ihandygroup.com/images/logo.png" alt=""></a>
+				<ul>  
+					<li><a href="../index.html">About Us</a><span class="liborder"></span></li>
+					<li><a href="./product.html">Our Products</a><span class="liborder "></span></li>
+					<li><a href="./career.html">Careers</a><span  class="liborder"></span></li>
+					<li><a href="./contact.html">Contact Us</a><span  class="liborder"></span></li>
+				</ul>
+			</div>
+			
+    	</div>
+    	
+    	<div id="careerlist">
+    		<p class="listheader">Business Solutions</p>
+    	</div>
+        <div id="listitem" v-for="item in listitems">
+            <h3>{{item.h3}}</h3>
+            <p v-for="items in item.p">{{items.dd}}</p>
+        </div>
+    	<div id="footer">
+			<ul>    
+				<li><a href="javaScript:;">Join Us</a></li>
+				<li><a href="javaScript:;">Contact Us</a></li>
+				<li><a href="Foundation.html">Foundation & Scholarship</a></li>
+				<li><a href="javaScript:;">Business Solutions</a></li>
+			</ul>
+			<p>Copyright © 2018 iHandy Group. All Rights Reserved.</p>
+	    </div>
+    </div>
+<script src="../js/vue.js"></script>
+<script>
+var app=new Vue({
+	el:"#app",
+	data:{
+		listitems:[
+            {'h3':'AdCaffe','p':[
+                {'dd':'iHandy AdCaffe Platform helps advertisers and publishers to have a clear insight into the obstacle market and achieve their goals much more easily.'},
+                {'dd':'Empowered by artificial intelligence technologies, AdCaffe is the highest quality mobile advertising and marketing platform. As one of the superior cultivators on iOS and Android mobiles apps, our team has a deep understanding of desire for advertising and monetization in the fast-changing mobile market. A.I. and machine learning enables us to continuously deliver cutting-edge solutions, like precise targeting, autonomous monetization optimization, real-time pricing, predictive segmentation, dynamic bidding, etc.'},
+                {'dd':'AdCaffe establishes a close relationship with advertisers and publishers, based on a dedicated and experienced team, in order to allow them to enjoy the collaboration and integration.'},
+            ]},
+              {'h3':'Data Lab','p':[
+                {'dd':'iHandy Group focuses on the research and application of machine learning algorithms based on mass data and gives stable and secure service when the number of app users grows explosively. With the research of data lab, the product quality and experience is improving, resulting in app users becoming more loyal.'},
+                {'dd':'Through iHandy Data Lab based on AWS, massive amounts of data could be handled real-time, which allows consumers to explore flexible data and find data value in a moment. Our service optimizes the app intelligently and can be easily embedded into business systems.'},
+                {'dd':'Algorithm and ability are our core-competitiveness. Through artificial intelligence, such as deep learning, reinforcement learning, migration algorithm, etc. App data can be deeply analyzed.'},
+                {'dd':'Through the research of data lab based on label model and interactive application analysis, we can exploit the value of app data, realize the multi-dimensional statistical analysis to drive product improvement, and finally transform it into commercial value.'}
+
+            ]}
+        ]
+	}
+
+})
+</script>
+
+</body>
+</html>

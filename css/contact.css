@@ -1,0 +1,35 @@
+#careerlist {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+#careerlist .listheader {
+  padding: 19.0rem 0 2rem 0;
+  letter-spacing: 0;
+  font-size: 5rem;
+  font-weight: bold;
+}
+#contactitem {
+  width: 50%;
+  margin: 0  auto;
+}
+#contactitem .item {
+  width: 100%;
+  margin-top: 8.5rem;
+}
+#contactitem .item img {
+  width: 17rem;
+  display: block;
+}
+#contactitem .item h3 {
+  margin-top: 2.4%;
+  margin-bottom: 2.5%;
+  font-family: AvenirLTStdMedium;
+  font-size: 2.4rem;
+}
+#contactitem .item ul li {
+  list-style: none;
+  color: #221815;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}

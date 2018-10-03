@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  height: 100%;
+}
+a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+#contentTop {
+  width: 100%;
+  /*height:100%;*/
+  background: rgba(34, 24, 21, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+#contentTop .header {
+  width: 95%;
+  /*height:0.28rem;*/
+  height: 56px;
+  line-height: 56px;
+  margin: 0 auto;
+}
+#contentTop .header .logohref {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+#contentTop .header .logohref img {
+  width: 80px;
+  height: 30px;
+  display: block;
+  vertical-align: middle;
+}
+#contentTop .header ul {
+  position: absolute;
+  right: 2%;
+  color: #fff;
+  font-family: CircularStdBook, Helvetica;
+}
+#contentTop .header ul li {
+  height: 25px;
+  line-height: 25px;
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px 0 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+  cursor: pointer;
+  /*border-bottom:2px solid #fff;
+					border-width: 0px;*/
+}
+#contentTop .header ul li .liborder {
+  content: " ";
+  width: 0;
+  height: 2.8px;
+  display: block;
+  background: #fff;
+  transition: 0.5s width;
+}
+#contentTop .header ul li:hover .liborder {
+  width: 100%;
+}
+#slide {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#slide ul {
+  width: 1000%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#slide ul li {
+  width: 100%;
+  list-style: none;
+}
+#slide ul li img {
+  width: 100%;
+  display: block;
+}
+#contentlist {
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+#contentlist h3 {
+  padding: 190px 0 20px 0;
+  letter-spacing: 0;
+  font-size: 75px;
+}
+#contentlist .list {
+  margin-top: 130px;
+  width: 100%;
+  overflow: hidden;
+}
+#contentlist .list .listitem {
+  width: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+#contentlist .list .listitem .listhide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  padding: 25% 0;
+  background: rgba(34, 24, 21, 0.8);
+  opacity: 0;
+  transition: opacity 1s;
+}
+#contentlist .list .listitem .listhide img {
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+}
+#contentlist .list .listitem .listhide h4 {
+  letter-spacing: 1.4px;
+  font-size: 38px;
+  color: #fff;
+  padding: 0 30px;
+}
+#contentlist .list .listitem .listhide h5 {
+  color: #eee;
+  font-size: 18px;
+  padding: 36px 30px;
+  margin-top: 50px;
+  transition: margin-top 0.5s;
+}
+#contentlist .list .listitem:hover .listhide {
+  opacity: 1;
+  /*z-index: 3;*/
+}
+#contentlist .list .listitem:hover h5 {
+  margin-top: 0px;
+}
+#contentlist .list .listitem .itembg {
+  width: 100%;
+  dispaly: block;
+  z-index: 50;
+  transition-duration: 1s;
+}
+#contentlist .list .listitem .itembg:hover {
+  transform: scale(1.2);
+}
+#Values {
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+#Values h3 {
+  padding: 190px 0 20px 0;
+  letter-spacing: 0;
+  font-size: 75px;
+}
+#Values .values {
+  box-sizing: border-box;
+  padding: 115px 0 87px 0;
+  width: 25%;
+  /*display: inline-block;*/
+  float: left;
+}
+#Values .values h1 {
+  /*color: #ff9ba7;*/
+  font-size: 85px;
+}
+#Values .values h5 {
+  margin: 0;
+  color: #221815;
+  font-size: 23px;
+  font-weight: 100;
+}
+#Values .values p {
+  width: 85%;
+  /*padding: 0 15px 0 15px;*/
+  color: rgba(34, 24, 21, 0.8);
+  font-size: 16px;
+  margin: 12% auto 0;
+  font-family: AvenirLTStdLight;
+  line-height: 24px;
+}
+.imgbanner {
+  width: 100%;
+  height: 482px;
+  /*line-height: 482px;*/
+  text-align: center;
+  background: url("http://www.ihandygroup.com/images/banners/join-us-bg.jpg");
+}
+.imgbanner h1 {
+  font-size: 75px;
+  color: #fff;
+  padding-top: 10%;
+}
+.imgbanner h5 {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 5%;
+}
+.imgbanner p {
+  width: 180px;
+  line-height: 42px;
+  height: 42px;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 3.5% auto;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  font-size: 12px;
+}
+.imgbanner p:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+#footer {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 115px;
+}
+#footer ul {
+  width: 100%;
+  margin-bottom: 75px;
+}
+#footer ul li {
+  list-style: none;
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+}
+#footer ul li a {
+  color: #221815;
+  font-size: 16px;
+}
+#footer p {
+  color: #221815;
+  text-align: center;
+  opacity: 0.5;
+  font-size: 12px;
+  clear: both;
+  padding: 8% 0 4% 0;
+}

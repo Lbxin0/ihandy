@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html style="font-size:62.5%">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>contact us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/contact.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/demo.css" />
+    <script src="main.js"></script>
+    <style>
+    .emails{
+    	margin-top: 3.5rem
+    }
+	
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div id="contentTop" style="background:rgba(34, 24, 21, 0.7);">
+			<div class="header">
+				<a href="javaScript:;" class="logohref"><img src="http://www.ihandygroup.com/images/logo.png" alt=""></a>
+				<ul>  
+					<li><a href="../index.html">About Us</a><span class="liborder"></span></li>
+					<li><a href="./product.html">Our Products</a><span class="liborder "></span></li>
+					<li><a href="./career.html">Careers</a><span  class="liborder"></span></li>
+					<li><a href="javaScript:;">Contact Us</a><span style="width: 100%" class="liborder"></span></li>
+				</ul>
+			</div>
+			
+    	</div>
+    	
+    	<div id="careerlist">
+    		<p class="listheader">Contact Us</p>
+    	</div>
+        <div id="contactitem">
+            <div class="item" v-for="item in contentitem">
+                <img :src="item.imgsrc" alt="">
+                <h3>{{item.h3}}</h3>
+                <ul>
+                    <li v-for="items in item.li" :class="items.class">{{items.dd}}</li>
+                </ul>
+            </div>
+        </div>
+    	<div id="footer">
+			<ul>    
+				<li><a href="javaScript:;">Join Us</a></li>
+				<li><a href="javaScript:;">Contact Us</a></li>
+				<li><a href="Foundation.html">Foundation & Scholarship</a></li>
+				<li><a href="business_solution.html">Business Solutions</a></li>
+			</ul>
+			<p>Copyright © 2018 iHandy Group. All Rights Reserved.</p>
+	    </div>
+    </div>
+<script src="../js/vue.js"></script>
+<script>
+var app=new Vue({
+	el:"#app",
+	data:{
+		contentitem:[
+            {'imgsrc':'http://www.ihandygroup.com/images/ihandy_color.png','h3':'iHandy Ltd.','li':[
+                {'dd':'Flat/Rm 603, 6/F Laws Commercial Plaza 788,'},
+                {'dd':'Cheung Sha Wan Road Kl'},
+                {'dd':'Kowloon, Hong Kong'},
+                {'dd':'public@ihandysoft.com','class':'emails'},
+                ]
+            },
+             {'imgsrc':'http://www.ihandygroup.com/images/gwi.png','h3':'Global Wise Investments Co., Ltd','li':[
+                {'dd':'Unit 04, 7/F, Bright Way Tower, No.33 Mong Kok Road,'},
+                {'dd':'Kowloon, Hong Kong'},
+                {'dd':'public@gregft.com','class':'emails'},
+                ]
+            },
+             {'imgsrc':'http://www.ihandygroup.com/images/taplogic.png','h3':'Taplogic Inc.','li':[
+                {'dd':'Room 400, 2711 Centerville Road, Newcastle,'},
+                {'dd':'Wilmington, Delaware, USA'},
+                {'dd':'public@Taplogicsoft.com','class':'emails'},
+                ]
+            },
+             {'h3':'BUSINESS','li':[
+                {'dd':'marketing@ihandysoft.com'},
+                {'dd':'advertise@ihandysoft.com','class':'emails'},
+                ]
+            }
+        ]
+
+	}
+
+})
+</script>
+
+</body>
+</html>

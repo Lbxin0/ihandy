@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html style="font-size:62.5%">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>product</title>
+    <link rel="shortcut icon" href="http://www.ihandygroup.com/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/product.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/demo.css" />
+    <script src="main.js"></script>
+    <style>
+    .pink{
+    	color:#ff9ba7;
+    }
+    .pink2{
+    	color: #ffb260;
+    }
+    .green{
+    	color: #6cd8c0;
+    }
+    .blue{
+    	color: #51b3ff
+    }
+    .Fright{
+    	float:right!important;
+    }
+	 .Fleft{
+    	float:left!important;
+    }
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div id="contentTop">
+			<div class="header" >
+				<a href="javaScript:;" class="logohref"><img src="http://www.ihandygroup.com/images/logo.png" alt=""></a>
+				<ul>  
+					<li><a href="../index.html">About Us</a><span class="liborder"></span></li>
+					<li><a href="javaScript:;">Our Products</a><span style="width: 100%" class="liborder "></span></li>
+					<li><a href="./career.html">Careers</a><span class="liborder"></span></li>
+					<li><a href="./contact.html">Contact Us</a><span class="liborder"></span></li>
+				</ul>
+			</div>
+			
+    	</div>
+    	<div class="slide"><p>Feel the Magic of Apps</p></div>
+    	<div id="productlist" v-for="item in productlists">
+    		<div class="left" :class="item.classright">
+    			<img :src="item.imglog" alt="">
+    			<h4>{{item.h4}}</h4>
+    			<h5>{{item.h5}}</h5>
+    			<a href="./product/Air Launcher.html"><p>VIEW MORE</p></a>
+    		</div>
+    		<div class="right" :class="item.classleft"><a href="./product/Air Launcher.html"><img :src="item.imgbg" alt=""></a></div>
+    	</div>
+    	<div id="footer">
+			<ul>    
+				<li><a href="javaScript:;">Join Us</a></li>
+				<li><a href="javaScript:;">Contact Us</a></li>
+				<li><a href="Foundation.html">Foundation & Scholarship</a></li>
+				<li><a href="business_solution.html">Business Solutions</a></li>
+			</ul>
+			<p>Copyright © 2018 iHandy Group. All Rights Reserved.</p>
+	    </div>
+    </div>
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+<script>
+var app=new Vue({
+	el:"#app",
+	data:{
+		productlists:[
+			{imglog:"http://www.ihandygroup.com/images/product/icon-airlauncher.png",h4:"Air Launcher",h5:"A highly customizable & fast launcher for android, one of the Top launcher apps on Google Play. Popular launcher themes and cool live wallpapers for Androids for free.",imgbg:"http://www.ihandygroup.com/images/product/cover-airlauncher.jpg",'classright':"Fright",'classleft':"Fleft"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-max.png",h4:"MAX Security",h5:"MAX Security is most powerful and efficient Anti-Virus software for your Android devices. It can find and remove malware, malicious software from ram and storage to keep your information safer. The anti virus engine is certified by AV-TEST.",imgbg:"http://www.ihandygroup.com/images/product/cover-max.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-rainbowkey.png",h4:"Air Launcher",h5:"RainbowKey Keyboard is the top-rated and the best keyboard app for Android. The smart keyboard provides you with gif keyboard, emoji keyboard, free keyboard themes and cool fonts!",imgbg:"http://www.ihandygroup.com/images/product/cover-rainbowkey.jpg",'classright':"Fright",'classleft':"Fleft"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-sweetcamera.png",h4:"RainbowKey",h5:"Sweet Camera is the most popular selfie camera on Google Play. Based on facial recognition and light correction technology, it offers tons of amazing face filters especially designed for everyone to capture their best selfie moment.",imgbg:"http://www.ihandygroup.com/images/product/cover-sweetcamera.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-inmessage.png",h4:"Hufdshf Guhihdf",h5:"World famous social app based on LBS positioning. With InMessage, you can meet people who are nearby, the most popular, recently online, interested in you and in any city all over the world. Up to 30 million global users are waiting for you to meet!",imgbg:"http://www.ihandygroup.com/images/product/cover-inmessage.jpg",'classright':"Fright",'classleft':"Fleft"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-zmoji.png",h4:"TYDB  DJFIjhhss",h5:"Zmoji is the most popular emoji avatars creator! With ZMoji, you can create your own personal emojis and GIFs with avatars that look just like you and share them directly from your keyboard.",imgbg:"http://www.ihandygroup.com/images/product/cover-zmoji.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-horoscope.png",h4:"DUGWE  HJGSFU",h5:"Top 1 daily horoscope apps 2018 in North America on Google Play and Apple Store, perfectly designed for astrology lovers! The most accurate horoscope predictions, and more fun facts.",imgbg:"http://www.ihandygroup.com/images/product/cover-horoscope.jpg",'classright':"Fright",'classleft':"Fleft"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-mo.png",h4:"JKDHFNKJHS",h5:"Mo+ is the best free calling app available, offering free calls and texts to phone numbers and other Mo+ users. Enjoy crystal-clear free calls with your friends and family, as well as walkie-talkie functionality and multimedia messaging.",imgbg:"http://www.ihandygroup.com/images/product/cover-mo.jpg"}
+		],
+		Values:[
+			{h1:"P",h5:"Passion",p:"Encourage yourself and be passionate with your goals. Everyday is an opportunity to learn something new.",classH1:"pink"},
+			{h1:"L",h5:"Love",p:"Love your life, your family, your work, for it is the reason everything has become so great.",classH1:"pink2"},
+			{h1:"A",h5:"Ambition",p:"Be devoted to your work to create your own position, instead of looking for one.",classH1:"green"},
+			{h1:"Y",h5:"Young",p:"Always stay curious; be bold and innovative without constraints. ",classH1:"blue"}
+		]
+	}
+
+})
+</script>
+<script>
+window.onscroll = function() {//为了保证兼容性，这里取两个值，哪个有值取哪一个
+	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		// scrollTop就是触发滚轮事件时滚轮的高度
+	var header=document.getElementById("contentTop");
+	if (scrollTop>=380) {
+		// console.log(header)
+		header.style.background ='rgba(34, 24, 21, 0.8)';
+	}else{
+		header.style.background ='rgba(34, 24, 21, 0.2)';
+	}
+	// console.log(scrollTop)
+}
+</script>
+</body>
+</html>

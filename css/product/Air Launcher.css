@@ -1,0 +1,165 @@
+.slide {
+  width: 100%;
+  max-height: 65rem;
+  background: url("../../image/airlauncher-bg-1.jpg") center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.slide .slideitem {
+  width: 100%;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  padding-top: 10%;
+}
+.slide .itemmessg {
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 18%;
+}
+.slide .itemmessg h3 {
+  font-size: 6.7rem;
+  font-weight: bold;
+  color: #fff;
+}
+.slide .itemmessg p {
+  font-size: 1.9rem;
+  color: #fff;
+}
+.slide .itemmessg span {
+  display: block;
+  width: 18rem;
+  height: 12rem;
+  margin-top: 6rem;
+  background: url('http://www.ihandygroup.com/images/google-dark.png') center center no-repeat;
+  background-size: 100%;
+}
+.slide img {
+  max-height: 80.6rem;
+  max-width: 100.6rem;
+  float: right;
+  margin-top: -10rem;
+}
+.slide .clickbtn {
+  width: 100%;
+  text-align: center;
+}
+.slide .clickbtn .btnlist {
+  line-height: 4rem;
+  width: 18rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border: 2px solid #fff;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  margin-top: 3.5%;
+  margin-right: 2%;
+}
+#contentitem {
+  width: 95%;
+  margin: 15rem auto;
+}
+#contentitem .hdnav {
+  width: 100%;
+  display: flex;
+}
+#contentitem .hdnav .hditem {
+  flex: 1;
+  text-align: center;
+}
+#contentitem .hdnav .hditem img {
+  width: 4.8rem;
+  height: 7.8rem;
+  display: block;
+  margin: 0 auto;
+}
+#contentitem .hdnav .hditem h3 {
+  font-size: 2.2rem;
+  color: #221815;
+}
+#contentitem .hdnav .hditem p {
+  font-size: 12px;
+}
+#productlist {
+  width: 95%;
+  box-sizing: border-box;
+  margin: 80px auto;
+  overflow: hidden;
+}
+#productlist:last-child {
+  padding-bottom: 183px;
+}
+#productlist .left {
+  width: 48%;
+  height: 610px;
+  float: left;
+  box-sizing: border-box;
+  padding: 51px 0 200px 0;
+}
+#productlist .left p {
+  width: 180px;
+  line-height: 42px;
+  height: 42px;
+  color: black;
+  border: 2px solid black;
+  margin: 3.5% auto;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0.65;
+  transition: opacity 0.5s;
+}
+#productlist .left p:hover {
+  opacity: 1;
+}
+#productlist .left img {
+  width: 70px;
+  display: block;
+  margin-top: 20px;
+  margin-left: 30px;
+  /*margin:0 auto;*/
+}
+#productlist .left h4 {
+  letter-spacing: 1.4px;
+  color: black;
+  padding: 20px 30px;
+  font-family: AvenirLTStdLight;
+  font-size: 48px;
+}
+#productlist .left h5 {
+  color: black;
+  opacity: 0.9;
+  font-family: AvenirLTStdLight;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding: 36px 30px;
+  line-height: 30px;
+}
+#productlist .right {
+  width: 48%;
+  height: 45rem;
+  float: right;
+  box-sizing: border-box;
+}
+#productlist .right img {
+  width: 100%;
+  height: 45rem;
+  display: block;
+}
+.itemadd {
+  width: 95%;
+  height: 45rem;
+  background: url('http://www.ihandygroup.com/images/product_airlauncher/airlauncher-element-5.png') center 5.5rem no-repeat;
+  background-size: 90%;
+  text-align: center;
+}
+.itemadd h3 {
+  font-size: 4.5rem;
+}
+.itemadd p {
+  font-size: 1.5rem;
+}

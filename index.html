@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html style="font-size: 20px">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/demo.css" />
+    <!-- <script src="main.js"></script> -->
+    <style>
+    .pink{
+    	color:#ff9ba7;
+    }
+    .pink2{
+    	color: #ffb260;
+    }
+    .green{
+    	color: #6cd8c0;
+    }
+    .blue{
+    	color: #51b3ff
+    }
+
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div id="contentTop">
+			<div class="header">
+				<a href="javaScript:;" class="logohref"><img src="http://www.ihandygroup.com/images/logo.png" alt=""></a>
+				<ul>  
+					<li><a href="javaScript:;">About Us</a><span class="liborder"></span></li>
+					<li><a href="./html/product.html">Our Products</a><span class="liborder"></span></li>
+					<li><a href="./html/career.html">Careers</a><span class="liborder"></span></li>
+					<li><a href="javaScript:;">Contact Us</a><span class="liborder"></span></li>
+				</ul>
+			</div>
+			<div class="slide"></div>
+    	</div>
+    	<div id="slide" >
+			<ul>
+				<li v-for="item in slide"><a :href="item.href"><img :src="item.imgsrc" :alt="item.alt"></a></li>
+			</ul>
+    	</div>
+    	<div id="vuelist">
+	    	<div id="contentlist">
+				<h3>Our Products</h3>
+				<div class="list">
+
+					<div class="listitem" v-for="item in listitems">
+						<div class="listhide">
+							<img :src="item.imglog" alt="">
+							<h4 >{{item.h4}}</h4>
+							<h5>{{item.h5}}</h5>
+						</div>
+						<img class="itembg" :src="item.imgbg"  alt="">
+						
+					</div>			
+
+				</div>
+
+	    	</div>
+	    	<div id="Values">
+				<h3>Our Values</h3>
+				<div class="values" v-for="item in Values">
+					<h1 :class="item.classH1">{{item.h1}}</h1>
+					<h5>{{item.h5}}</h5>
+					<p>{{item.p}}</p>
+				</div>
+	    	</div>
+	    </div>
+	    <div class="imgbanner">
+	    	<h1>Join Us</h1>
+	    	<h5>Let’s make something great together!</h5>
+	    	<p>VIEW MORE</p>
+	    </div>
+	    <div id="footer">
+			<ul>    
+				<li><a href="javaScript:;">Join Us</a></li>
+				<li><a href="javaScript:;">Contact Us</a></li>
+				<li><a href="./html/Foundation.html">Foundation & Scholarship</a></li>
+				<li><a href="./html/business_solution.html">Business Solutions</a></li>
+			</ul>
+			<p>Copyright © 2018 iHandy Group. All Rights Reserved.</p>
+	    </div>
+	</div>
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+<script>
+var app=new Vue({
+	el:"#app",
+	data:{
+		slide:[
+		{'imgsrc':'http://www.ihandygroup.com/images/banners/banner-1.jpg','alt':'Technology','href':'javaScript:;'},
+		{'href':'javaScript:;','imgsrc':'http://www.ihandygroup.com/images/banners/banner-2.jpg','alt':'1.5 Billion Satisf'},
+		{'href':'javaScript:;','imgsrc':'http://www.ihandygroup.com/images/banners/banner-3.jpg','alt':'Over 25 Top-Ranked Apps'}
+		],
+		listitems:[
+			{imglog:"http://www.ihandygroup.com/images/product/icon-airlauncher.png",h4:"Air Launcher",h5:"The stylish & faster launcher that customizes your home screen.",imgbg:"http://www.ihandygroup.com/images/product/cover-airlauncher.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-max.png",h4:"MAX Security",h5:"Anti-virus. Junk Cleaner. Phone Booster. Battery Saver. App Locker. All in ONE.",imgbg:"http://www.ihandygroup.com/images/product/cover-max.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-rainbowkey.png",h4:"Air Launcher",h5:"Customize your keyboards with playful GIFs, fun emojis, cool fonts, and a variety of themes.",imgbg:"http://www.ihandygroup.com/images/product/cover-rainbowkey.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-sweetcamera.png",h4:"RainbowKey",h5:"The stylish & faster launcher that customizes your home screen.",imgbg:"http://www.ihandygroup.com/images/product/cover-sweetcamera.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-inmessage.png",h4:"Hufdshf Guhihdf",h5:"The stylish & jsah jdfids sdjhfdsuf ljoifs home screen.",imgbg:"http://www.ihandygroup.com/images/product/cover-inmessage.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-zmoji.png",h4:"TYDB  DJFIjhhss",h5:"Ajshdsh__jkcjhs. Junk Cleaner. Phone Booster. Battery Saver. App Locker. All in ONE.",imgbg:"http://www.ihandygroup.com/images/product/cover-zmoji.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-horoscope.png",h4:"DUGWE  HJGSFU",h5:"DJKS  your keyboards with playful GIFs, fun SDFSHGJ, cool fonts, and a variety of themes.",imgbg:"http://www.ihandygroup.com/images/product/cover-horoscope.jpg"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-mo.png",h4:"JKDHFNKJHS",h5:"tyew jhhnj & faster launcher that ghsd your home screen.",imgbg:"http://www.ihandygroup.com/images/product/cover-mo.jpg"}
+		],
+		Values:[
+			{h1:"P",h5:"Passion",p:"Encourage yourself and be passionate with your goals. Everyday is an opportunity to learn something new.",classH1:"pink"},
+			{h1:"L",h5:"Love",p:"Love your life, your family, your work, for it is the reason everything has become so great.",classH1:"pink2"},
+			{h1:"A",h5:"Ambition",p:"Be devoted to your work to create your own position, instead of looking for one.",classH1:"green"},
+			{h1:"Y",h5:"Young",p:"Always stay curious; be bold and innovative without constraints. ",classH1:"blue"}
+		]
+	}
+
+})
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+<script>
+	$(function(){
+	var url="120.76.205.241:8000?apikey=XNujFrUdnYF6SZoU5kE5UHK8saiEfNKegwdPocPXYf6An2cmfZH6AWTIp5mzj11E";
+	var value={'kw':'海景','type':'1','cityid':'qd'};
+	$.ajax({
+		url:'https://c.y.qq.com/v8/fcg-bin/fcg_myqq_toplist.fcg',
+		type:'get',
+		// data:value,
+		dataType:'text',
+		success:function(data){
+				console.log(data.data)
+		}
+	})
+window.onscroll = function() {//为了保证兼容性，这里取两个值，哪个有值取哪一个
+	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		// scrollTop就是触发滚轮事件时滚轮的高度
+	var header=document.getElementById("contentTop");
+	if (scrollTop>=500) {
+		// console.log(header)
+		header.style.background ='rgba(34, 24, 21, 0.8)';
+	}else{
+		header.style.background ='rgba(34, 24, 21, 0.2)';
+	}
+	// console.log(scrollTop)
+}
+})
+</script>
+</body>
+</html>

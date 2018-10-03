@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html style="font-size:62.5%">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/product/Air Launcher.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/demo.css" />
+    <script src="main.js"></script>
+    <style>
+   .Fright{
+    	float:right!important;
+    }
+	 .Fleft{
+    	float:left!important;
+    }
+	
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div id="contentTop">
+			<div class="header">
+				<a href="javaScript:;" class="logohref"><img src="http://www.ihandygroup.com/images/logo.png" alt=""></a>
+				<ul>  
+					<li><a href="../../index.html">About Us</a><span class="liborder"></span></li>
+					<li><a href="../product.html">Our Products</a><span style="width: 100%" class="liborder "></span></li>
+					<li><a href="../contact.html">Careers</a><span  class="liborder"></span></li>
+					<li><a href="../contact.html">Contact Us</a><span class="liborder"></span></li>
+				</ul>
+			</div>
+			
+    	</div>
+    	<div class="slide">
+    		<div class="itemmessg">
+    			<h3>Air Launcher</h3>
+    			<p>The stylish & faster launcher that customizes your home screen.</p>
+    			<a href="https://play.google.com/store/apps/details?id=com.honeycomb.launcher"><span></span></a>
+    		</div>
+    		<img src="http://www.ihandygroup.com/images/product_airlauncher/airlauncher-phone.png" alt="">
+    		
+    	</div>
+    	<div id="contentitem">
+    		<div class="hdnav">
+    			<div class="hditem" v-for="item in hditem">
+    				<img :src="item.img" alt="">
+    				<h3>{{item.h3}}</h3>
+    				<p>{{item.p}}</p>
+    			</div>
+    		</div>
+    	<!-- 	<div class="item">
+    			<div class="iteml">
+    				<h3></h3>
+    				<h5></h5>
+    				<p></p>
+
+    			</div>
+    			<div class="itemR"></div>
+    		</div> -->
+    		<div id="productlist" v-for="item in productlists">
+	    		<div class="left" :class="item.classright">
+	    			<h4>{{item.h4}}</h4>
+	    			<h5>{{item.h5}}</h5>
+	    			<p>VIEW MORE</p>
+	    		</div>
+	    		<div class="right" :class="item.classleft"><a href="javaScript:;"><img :src="item.imgbg" alt=""></a></div>
+    		</div>
+    		<div class="itemadd">
+    			<h3>Themes </h3>
+    			<p>Style up your home screen with our delicately-designed themes for FREE</p>
+    		</div>
+    	</div>
+    	<div id="footer">
+			<ul>    
+				<li><a href="javaScript:;">Join Us</a></li>
+				<li><a href="javaScript:;">Contact Us</a></li>
+				<li><a href="../Foundation.html">Foundation & Scholarship</a></li>
+				<li><a href="../business_solution.html">Business Solutions</a></li>
+			</ul>
+			<p>Copyright © 2018 iHandy Group. All Rights Reserved.</p>
+	    </div>
+    </div>
+<script src="../../js/vue.js"></script>
+<script>
+var app=new Vue({
+	el:"#app",
+	data:{
+		hditem:[
+			{'img':'http://www.ihandygroup.com/images/product_airlauncher/airlauncher-icon-1.png','h3':'FAST ','p':'Speed up phone 200% faster.'},
+			{'img':'http://www.ihandygroup.com/images/product_airlauncher/airlauncher-icon-2.png','h3':'SIMPLE  ','p':'Operate feature just by 1-tap.'},
+			{'img':'http://www.ihandygroup.com/images/product_airlauncher/airlauncher-icon-3.png','h3':'PERSONALIZED ','p':'10000+ free wallpapers, emojis and themes.'},
+		],
+		productlists:[
+			{imglog:"http://www.ihandygroup.com/images/product/icon-airlauncher.png",h4:"Air Launcher",h5:"A highly customizable & fast launcher for android, one of the Top launcher apps on Google Play. Popular launcher themes and cool live wallpapers for Androids for free.",imgbg:"http://www.ihandygroup.com/images/product_airlauncher/airlauncher-element-1.png",'classright':"Fright",'classleft':"Fleft"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-max.png",h4:"MAX Security",h5:"MAX Security is most powerful and efficient Anti-Virus software for your Android devices. It can find and remove malware, malicious software from ram and storage to keep your information safer. The anti virus engine is certified by AV-TEST.",imgbg:"http://www.ihandygroup.com/images/product_airlauncher/airlauncher-element-2.png"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-rainbowkey.png",h4:"Air Launcher",h5:"RainbowKey Keyboard is the top-rated and the best keyboard app for Android. The smart keyboard provides you with gif keyboard, emoji keyboard, free keyboard themes and cool fonts!",imgbg:"http://www.ihandygroup.com/images/product_airlauncher/airlauncher-element-3.png",'classright':"Fright",'classleft':"Fleft"},
+			{imglog:"http://www.ihandygroup.com/images/product/icon-sweetcamera.png",h4:"RainbowKey",h5:"Sweet Camera is the most popular selfie camera on Google Play. Based on facial recognition and light correction technology, it offers tons of amazing face filters especially designed for everyone to capture their best selfie moment.",imgbg:"http://www.ihandygroup.com/images/product_airlauncher/airlauncher-element-4.png"},
+			
+		],
+	}
+
+})
+</script>
+<script>
+window.onscroll = function() {//为了保证兼容性，这里取两个值，哪个有值取哪一个
+	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		// scrollTop就是触发滚轮事件时滚轮的高度
+	var header=document.getElementById("contentTop");
+	if (scrollTop>=350) {
+		// console.log(header)
+		header.style.background ='rgba(34, 24, 21, 0.8)';
+	}else{
+		header.style.background ='rgba(34, 24, 21, 0.2)';
+	}
+	// console.log(scrollTop)
+}
+</script>
+</body>
+</html>
