@@ -152,6 +152,12 @@ img {
 #contentlist .list .listitem:hover h5 {
   margin-top: 0px;
 }
+/* 背景测试 */
+#contentlist .list .listitem:hover img{
+  transform: scale(1.2);
+  transition: 1s all;
+  opacity: 0.5;
+}
 #contentlist .list .listitem .itembg {
   width: 100%;
   dispaly: block;
